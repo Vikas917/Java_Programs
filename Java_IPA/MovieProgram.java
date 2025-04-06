@@ -51,7 +51,7 @@ import java.util.Scanner;
 public class MovieProgram {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Movie[] arr = new Movie[4];
+        Movies[] arr = new Movies[4];
 
         for (int i = 0; i < 4; i++) {
             String a = sc.nextLine();
@@ -59,11 +59,11 @@ public class MovieProgram {
             String c = sc.nextLine();
             int d = sc.nextInt();sc.nextLine();
 
-            arr[i] = new Movie(a,b,c,d);
+            arr[i] = new Movies(a,b,c,d);
         }
         String searchGenre = sc.nextLine();
 
-        Movie[] arr2 = getMovieByGenre(arr,searchGenre);
+        Movies[] arr2 = getMovieByGenre(arr,searchGenre);
         for(int i=0;i < arr2.length;i++) {
             if(arr2[i].getBudget() > 80000000) {
                 System.out.println("High Budget Movie");
@@ -73,8 +73,8 @@ public class MovieProgram {
             }
         }
     }
-    public static Movie[] getMovieByGenre(Movie[] arr,String searchGenre) {
-        Movie[] arr2 = new Movie[0];
+    public static Movies[] getMovieByGenre(Movies[] arr, String searchGenre) {
+        Movies[] arr2 = new Movies[0];
         for (int i=0;i < arr.length;i++) {
             if (arr[i].getGenre().equalsIgnoreCase(searchGenre)) {
                 arr2 = Arrays.copyOf(arr2,arr2.length+1);
@@ -84,7 +84,7 @@ public class MovieProgram {
         return arr2;
     }
 }
-class Movie {
+class Movies {
     String movieName;
     String company;
     String genre;
@@ -122,7 +122,7 @@ class Movie {
         this.budget = budget;
     }
 
-    public Movie(String movieName, String company, String genre, int budget) {
+    public Movies(String movieName, String company, String genre, int budget) {
         this.movieName = movieName;
         this.company = company;
         this.genre = genre;
