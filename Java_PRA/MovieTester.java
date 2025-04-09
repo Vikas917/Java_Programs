@@ -1,4 +1,103 @@
-package Java_IPA;
+/*
+You are tasked with designing the application for getting information for the Movies and actors working in the said movie.
+
+Consider the following classes for the Movies.
+
+movield int
+movieName. String
+movieRating: int
+numberOfActor int
+actors: List<String>
+
+
+Make getter, setter and constructor for the Movie class.
+
+There should be 2 non static method that needs to be created in the MovieService Class as mentioned below:
+
+Task 1: Fetch List of Movies Based on the Actor:
+
+Create a non static method which will find out the list of movies, in which specific actor has worked. This method will take
+two input: List<Movie> movies and String actorName. In case there are no movies with aforementioned actorName print
+"No Movies Found" in Movie Tester. This method will return the List of Movies with the mentioned actor Name.This list must be
+printed in the main method. Please Investigate the Sample input and output for the better understanding of the program.
+
+Task 2: Calculate Average Movie Rating based on the Actor:
+
+Create a non static method which will assist in getting the average movie rating for the specific actor. This method will take
+two inputs: List<Movie> movies and String actorName. In case there are no movies with aforementioned actor Name throw
+NeActorFoundException with the message "No Actor Found" from the MovieService class. This method will return double
+averageRating of movies with the mentioned actorName. This averageRating of movies must be printed in the main method.
+Please investigate the Sample input and output for the better understanding of the program.
+
+Note:
+
+Write the code for accepting inputs, printing outputs and calling the non-static methods in the main method from the
+MovieService class.You can refer to the sample input/output below to verify your solution.
+Don't use any static test or formatting for printing the result, just invoke the methods and print the result.
+
+• All comparisons should be case-insensitive.
+
+Sample Input 1:
+
+3
+movie1
+4
+2
+sahi
+sid
+2
+movie2
+3
+1
+sid
+3
+movie3
+5
+1
+sahi
+sid
+sahi
+
+Sample output 1:
+
+1
+movie1
+4
+2
+movie 2
+3
+Average Rating for the actor is: 4.5
+
+
+Sample Input 2:
+
+3
+1
+movie1
+4
+2
+sahi
+sid
+2
+movie2
+3
+1
+sid
+3
+movie3
+5
+sahi
+Siddy
+sahil
+
+Sample output 2:
+
+No Movies Found
+No Actor Found
+
+ */
+
+package Java_PRA;
 
 import java.util.*;
 
