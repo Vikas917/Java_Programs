@@ -1,9 +1,11 @@
 /*
 Linked List Data Structure:
-                            Data structure which is a linear collection of data elements, called nodes, each pointing to the next node by means of a pointer
+                            Data structure which is a linear collection of data elements, called nodes,
+                            each pointing to the next node by means of a pointer
 
-                              A Linked List is a linear data structure where elements (nodes) are stored in a sequence, but unlike arrays,
-linked lists do not store elements in contiguous memory locations. Instead, each element points to the next element in the list, forming a chain-like structure.
+                            A Linked List is a linear data structure where elements (nodes) are stored in a sequence,
+                            but unlike arrays, linked lists do not store elements in contiguous memory locations.
+                            Instead, each element points to the next element in the list, forming a chain-like structure.
  */
 
 package Java_Basics;
@@ -173,7 +175,7 @@ public class LinkedList<I extends Number> {
         Node fast = head;
         Node slow = head;
 
-        while (fast.next != null && fast.next.next != null) {
+        while (fast!= null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
@@ -247,28 +249,29 @@ public class LinkedList<I extends Number> {
         LinkedList<Number> list = new LinkedList<Number>();
         list.addFirst("a");
         list.addFirst("is");
-        list.printList();
-        list.addLast("list");
         list.addFirst("This");
         list.printList();
-        list.deleteFirst();
-        list.printList();
-        list.deleteLast();
-        list.printList();
-        System.out.println(list.getSize());
-        list.addFirst("This");
-        list.addLast("List");
-        list.printList();
-        list.reverseIteratively();
-        list.printList();
-        list.head = list.reverseRecursively(list.head);
-        list.printList();
-        list.head = list.removeNthNodeFromEnd(list.head, 2);
-        list.printList();
-        list.deleteLast();
-        list.printList();
-        list.addLast("This");
-        list.printList();
+//        list.addLast("list");
+//        list.addFirst("This");
+//        list.printList();
+//        list.deleteFirst();
+//        list.printList();
+//        list.deleteLast();
+//        list.printList();
+//        System.out.println(list.getSize());
+//        list.addFirst("This");
+//        list.addLast("List");
+//        list.printList();
+//        list.reverseIteratively();
+//        list.printList();
+//        list.head = list.reverseRecursively(list.head);
+//        list.printList();
+//        list.head = list.removeNthNodeFromEnd(list.head, 2);
+//        list.printList();
+//        list.deleteLast();
+//        list.printList();
+//        list.addLast("This");
+//        list.printList();
         System.out.println(list.isPalindromeLinkedList(list.head));
     }
 }
