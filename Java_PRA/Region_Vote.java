@@ -219,7 +219,7 @@ class Services {
 
             for(Politician p : r.getPoliticians()) {
                 if(p.getVotes() < 0){
-                    throw new VotesIsNegativeException("Alert: Votes of a certain is negative.");
+                    throw new VotesIsNegativeException("Alert: Votes of a certain politician is negative.");
                 }
 
                 if(maxVotes < p.getVotes()){
@@ -238,7 +238,7 @@ class Services {
                 System.out.println(r.getRegionName() + " with id "+ r.getRegionId() + " = " + winner);
             }
             else {
-                System.out.println("No single politician found with maximum votes for RegionName");
+                System.out.println("No single politician found with maximum votes for "+ r.getRegionName());
             }
 
         }
@@ -256,9 +256,11 @@ class Services {
 
             for(Politician p : r.getPoliticians()) {
                 if(p.getVotes() < 0){
-                    throw new VotesIsNegativeException("Alert: Votes of a certain is negative.");
+                    throw new VotesIsNegativeException("Alert: Votes of a certain region is negative.");
                 }
-                totalVotes += p.getVotes();
+                else {
+                    totalVotes += p.getVotes();
+                }
             }
 
             if(totalVotes > maxTotalVotes){
@@ -277,7 +279,7 @@ class Services {
             System.out.println("Region with maximum votes = " + maxRegion);
         }
         else {
-            System.out.println("No region found with maximum votes");
+            System.out.println("No region found with maximum votes.");
         }
     }
 }
